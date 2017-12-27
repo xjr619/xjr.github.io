@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>（一）使用 Hexo+Github 搭建博客 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo介绍 hexo —— 快速、简洁且高效的博客框架      安装 Node.js 根据个人电脑版本（64或32位）下载NodeJS建议选择 LTS版本 | 参考文档  安装 Git 根据个人电脑版本（64或32位）下载 Git">
+<meta name="keywords" content="Hexo,博客">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（一）使用 Hexo+Github 搭建博客">
+<meta property="og:url" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo介绍 hexo —— 快速、简洁且高效的博客框架      安装 Node.js 根据个人电脑版本（64或32位）下载NodeJS建议选择 LTS版本 | 参考文档  安装 Git 根据个人电脑版本（64或32位）下载 Git">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_1-1.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-2.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-3.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-3-0.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-3-1.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-3-2.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-4-1.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_3-4.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-2.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-3.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-4.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-5.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-7.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-8.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-9.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-10.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-11.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-12.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_5-0.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_5-1.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_5-2.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_5-3.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-3.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_5-4.png">
+<meta property="og:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_2-12.png">
+<meta property="og:updated_time" content="2017-12-27T06:34:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="（一）使用 Hexo+Github 搭建博客">
+<meta name="twitter:description" content="Hexo介绍 hexo —— 快速、简洁且高效的博客框架      安装 Node.js 根据个人电脑版本（64或32位）下载NodeJS建议选择 LTS版本 | 参考文档  安装 Git 根据个人电脑版本（64或32位）下载 Git">
+<meta name="twitter:image" content="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/image/hexo_1-1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-使用Hexo+GitHub搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/08/使用Hexo+GitHub搭建博客/" class="article-date">
+  <time datetime="2017-03-07T16:00:00.000Z" itemprop="datePublished">2017-03-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/杂/">杂</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      （一）使用 Hexo+Github 搭建博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Hexo介绍"><a href="#Hexo介绍" class="headerlink" title="Hexo介绍"></a>Hexo介绍</h1><blockquote>
+<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo</a> —— 快速、简洁且高效的博客框架<br>    <img src="./image/hexo_1-1.png" alt="image"></p>
+</blockquote>
+<h1 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h1><blockquote>
+<p>根据个人电脑版本（64或32位）<br><a href="http://nodejs.cn/download/" target="_blank" rel="noopener">下载NodeJS</a><br>建议选择 <b>LTS版本</b> | <a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="noopener">参考文档</a></p>
+</blockquote>
+<h1 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h1><blockquote>
+<p>根据个人电脑版本（64或32位）<br><a href="http://git-scm.com/download/" target="_blank" rel="noopener">下载 Git</a></p>
+</blockquote>
+<a id="more"></a> 
+<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><ol>
+<li><p>新建文件夹’blog’ 并进入</p>
+</li>
+<li><p>在空文件夹内单击 ‘鼠标右键’，选择 ‘Git Bash Here’<br><img src="./image/hexo_3-2.png" alt="image"></p>
+</li>
+<li><p>弹出 bash 小黑窗<br><img src="./image/hexo_3-3.png" alt="image"></p>
+<ul>
+<li>在黑窗中，按顺序输入下面代码</li>
+</ul>
+<ol>
+<li><p>输入 npm i -g hexo-cli ，使用 npm 全局安装 hexo 的命令行工具</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i -g hexo-cli</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>输入 hexo init  ，利用 hexo 命令初始化一个新的博客</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init     // 根据个人网速情况，可能要等很久</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>初始化中…<br> <img src="./image/hexo_3-3-0.png" alt="image">    </p>
+<p>hexo init 初始化完成！<br> <img src="./image/hexo_3-3-1.png" alt="image">   </p>
+</blockquote>
+</li>
+<li><p>输入 npm i ，安装包（如果网速差或报错，建议使用 cnpm ）<br> <a href="https://npm.taobao.org/" target="_blank" rel="noopener">cnpm 的使用方法</a></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cnpm i     // 根据个人网速情况，可能要等很久</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>使用 cnpm i 安装包<br> <img src="./image/hexo_3-3-2.png" alt="image"></p>
+</blockquote>
+</li>
+<li><p>输入 hexo s ，开启本地服务器</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p> <img src="./image/hexo_3-4-1.png" alt="image"></p>
+</li>
+<li><p>在浏览器输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>  查看我们的博客<br> <img src="./image/hexo_3-4.png" alt="image"></p>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h1><blockquote>
+<p>把写好的 markdown 文件，存放到 /source/_posts 文件夹 中即可</p>
+</blockquote>
+<h1 id="配置-NexT-主题（可选）"><a href="#配置-NexT-主题（可选）" class="headerlink" title="配置 NexT 主题（可选）"></a>配置 NexT 主题（可选）</h1><h2 id="Made-by-IIssNan-GitHub"><a href="#Made-by-IIssNan-GitHub" class="headerlink" title="Made by IIssNan @ GitHub"></a>Made by <a href="https://github.com/iissnan" target="_blank" rel="noopener">IIssNan</a> @ GitHub</h2><ul>
+<li>NexT 主题官方文档： <a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">http://theme-next.iissnan.com/</a></li>
+<li>具体配置参考： <a href="https://tinymark.github.io/2017/03/06/杂/NexT主题基本配置" target="_blank" rel="noopener">NexT主题基本配置</a></li>
+</ul>
+<h1 id="完成部署GitHub"><a href="#完成部署GitHub" class="headerlink" title="完成部署GitHub"></a>完成部署GitHub</h1><blockquote>
+<p>原理：<br>每个 Github 账户都可以创建一个 YourName.github.io 的仓库，<br>这个仓库的 master 分支是可以直接使用 YourName.github.io 在网络中访问的，<br>我们可以利用 Github 的这个功能来进行静态页面的展示。</p>
+<p>有两种部署的方式，一种是手动部署，一种是使用 hexo 命令行部署，推荐使用第二种</p>
+</blockquote>
+<h2 id="1-手动部署"><a href="#1-手动部署" class="headerlink" title="1. 手动部署"></a>1. 手动部署</h2><ol>
+<li><p>清空之前生成的博客文件</p>
+<blockquote>
+<p>进入 bash 小黑窗，输入 hexo clean （如果服务器开启中，可以使用 Ctrl + c 停止）<br> <img src="./image/hexo_2-2.png" alt="image">    </p>
+</blockquote>
+</li>
+<li><p>生成博客文件</p>
+<blockquote>
+<p>输入 hexo g</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>生成完成！<br> <img src="./image/hexo_2-3.png" alt="image">    </p>
+</blockquote>
+</li>
+<li><p>进入 public 文件夹中，开启 bash 黑窗</p>
+<blockquote>
+<p>进入 public 文件夹<br> <img src="./image/hexo_2-4.png" alt="image"><br>开启 bash 黑窗<br> <img src="./image/hexo_2-5.png" alt="image">    </p>
+</blockquote>
+</li>
+<li><p>输入git init 初始化仓库，并使用 add 和 commit 提交</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git init</span><br><span class="line">$ git add .</span><br><span class="line">$ git commit -m &apos;blog&apos;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>git init &amp; git add .<br> <img src="./image/hexo_2-7.png" alt="image"><br>git commit<br> <img src="./image/hexo_2-8.png" alt="image"><br>完成提交！<br> <img src="./image/hexo_2-9.png" alt="image">                       </p>
+</blockquote>
+</li>
+<li><p>使用 git push 命令推送到 Github 仓库</p>
+<blockquote>
+<p>注意后面需要加上 –force 强制覆盖</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push https://github.com/YourName/YourName.github.io.git master --force</span><br></pre></td></tr></table></figure>
+<p>如果使用 https 地址，需要输入用户名和密码<br> <img src="./image/hexo_2-10.png" alt="image"><br>推送完成！<br> <img src="./image/hexo_2-11.png" alt="image">                       </p>
+</blockquote>
+</li>
+<li><p>在浏览器输入 YourName.github.io 来访问你的博客<br> <img src="./image/hexo_2-12.png" alt="image">                       </p>
+</li>
+</ol>
+<h2 id="2-使用-hexo-命令部署"><a href="#2-使用-hexo-命令部署" class="headerlink" title="2. 使用 hexo 命令部署"></a>2. 使用 hexo 命令部署</h2><ul>
+<li>此方法需要配置 SSH 密钥来免密提交，SSH 的配置方法参考 <a href="https://tinymark.github.io/2017/03/06/杂/NexT主题基本配置/" target="_blank" rel="noopener">SSH配置方法</a></li>
+</ul>
+<ol>
+<li><p>在 blog 文件夹中打开 bash 黑窗，安装部署工具<br> <img src="./image/hexo_5-0.png" alt="image">  </p>
+<blockquote>
+<p>输入 npm i hexo-deployer-git –save  来安装 hexo 部署工具</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm i hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>同样可以使用 cnpm 进行安装（推荐）<br> <img src="./image/hexo_5-1.png" alt="image"></p>
+</blockquote>
+</li>
+<li><p>找到 ‘~/blog/_config.yml’ 文件，修改最后的代码：</p>
+<blockquote>
+<p>代码如下：</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: git@github.com:YourName/YourName.github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p><img src="./image/hexo_5-2.png" alt="image"></p>
+</blockquote>
+</li>
+<li><p>清空之前生成的博客文件</p>
+<blockquote>
+<p>打开 bash 小黑窗<br>输入 hexo clean<br><img src="./image/hexo_5-3.png" alt="image"></p>
+</blockquote>
+</li>
+<li><p>生成博客文件</p>
+<blockquote>
+<p>输入 hexo g</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>生成完成！<br> <img src="./image/hexo_2-3.png" alt="image">  </p>
+</blockquote>
+</li>
+<li><p>部署到 Github</p>
+<blockquote>
+<p>输入 hexo d </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>最后显示 INFO  Deploy done: git 代表部署成功<br><img src="./image/hexo_5-4.png" alt="image"></p>
+</blockquote>
+</li>
+<li><p>在浏览器输入 YourName.github.io 来访问你的博客<br> <img src="./image/hexo_2-12.png" alt="image">  </p>
+</li>
+</ol>
+<h1 id="自动部署方案"><a href="#自动部署方案" class="headerlink" title="自动部署方案"></a>自动部署方案</h1><blockquote>
+<p><a href="https://tinymark.github.io/2017/03/06/杂/使用Travis%20CI自动部署Hexo博客" target="_blank" rel="noopener">使用Travis CI自动部署Hexo博客</a></p>
+</blockquote>
+<h1 id="总结常用命令"><a href="#总结常用命令" class="headerlink" title="总结常用命令"></a>总结常用命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean </span><br><span class="line">// 清空 ( hexo generate ) 生成的博客</span><br><span class="line"></span><br><span class="line">$ hexo g （hexo generate） </span><br><span class="line">// 生成博客文件</span><br><span class="line"></span><br><span class="line">$ hexo s （hexo server）</span><br><span class="line">// 启动本地服务器</span><br><span class="line"></span><br><span class="line">$ hexo d （hexo deploy）</span><br><span class="line">// 按照配置好的_config.yml文件，完成部署</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/03/08/使用Hexo+GitHub搭建博客/" data-id="cjboz3llj0001tsqmveauci17" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/12/27/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Neuer</strong>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/杂/">杂</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/12/27/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/08/使用Hexo+GitHub搭建博客/">（一）使用 Hexo+Github 搭建博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
